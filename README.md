@@ -11,6 +11,7 @@ A simple web-based application for managing products with features like creation
 - Filter products by Name or Category dynamically as you type.
 - Persist product data across sessions using localStorage.
 - Automatically calculate the total price for each product using the formula:
+  
   ```
   Total = Price - Taxes - Ads + Discounts
   ```
@@ -18,10 +19,12 @@ A simple web-based application for managing products with features like creation
 ## Installation
 
 1. Clone the repository or download the HTML file:
+   
    ```sh
    git clone https://github.com/ZEROKU-ZZ/Products-Management-App.git
    ```
-2. Open the `index.html` file in your preferred browser:
+3. Open the `index.html` file in your preferred browser:
+   
    ```sh
    open index.html
    ```
