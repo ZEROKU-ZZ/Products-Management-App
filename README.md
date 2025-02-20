@@ -19,7 +19,7 @@ A simple web-based application for managing products with features like creation
 
 1. Clone the repository or download the HTML file:
    ```sh
-   git clone https://github.com/your-repo-url/product-management-app.git
+   git clone https://github.com/ZEROKU-ZZ/WebSite.git
    ```
 2. Open the `index.html` file in your preferred browser:
    ```sh
