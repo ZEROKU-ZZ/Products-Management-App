@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Product Management App</title>
+  </head>
+  <body>
+    <div class="hidden" id="content">
+        <h1>Product Management App</h1>
+    <form id="productForm">
+      <input placeholder="Name" type="text" id="name" required />
+      <input placeholder="Price" type="number" id="price" required />
+      <input placeholder="Category" type="text" id="category" required />
+      <input placeholder="ID" type="text" id="id" required />
+      <input placeholder="Taxes" type="number" id="taxes"/>
+      <input placeholder="Ads" type="number" id="ads"/>
+      <input placeholder="Discounts" type="number" id="discounts"/>
+      <input placeholder="Count" type="number" id="count"/>
+      <button
+        type="submit"
+        onclick="
+    showProductsNumber();
+    "
+      >
+        Create Product
+      </button>
+      <div class="goToProducts"></div>
+    </form>
+    <div class="search-bar">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by Name or Category..."
+        oninput="filterProducts()"
+      />
+      <button
+        class="delete-all-btn"
+        onclick="
+    deleteAllProducts();
+    showProductsNumber();
+    "
+      >
+        Delete All Products <small id="showProductsNumber"></small>
+      </button>
+    </div>
+    <table id="productTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>ID</th>
+          <th>Taxes</th>
+          <th>Ads</th>
+          <th>Discounts</th>
+          <th>Price After Discount</th>
+          <th>Total</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal" id="editModal">
+      <h2>Edit Product</h2>
+      <form id="editProductForm">
+        <label for="editName">Name:</label>
+        <input type="text" id="editName" required />
+        <label for="editPrice">Price:</label>
+        <input type="number" id="editPrice" required />
+        <label for="editCategory">Category:</label>
+        <input type="text" id="editCategory" required />
+        <label for="editId">ID:</label>
+        <input type="text" id="editId" readonly />
+        <label for="editTaxes">Taxes:</label>
+        <input type="number" id="editTaxes" value="0" />
+        <label for="editAds">Ads:</label>
+        <input type="number" id="editAds" value="0" />
+        <label for="editDiscounts">Discounts:</label>
+        <input type="number" id="editDiscounts" value="0" />
+        <div class="buttons-container">
+            <button type="submit">Save Changes</button>
+        <button type="button" onclick="closeModal()">Cancel</button>
+        </div>
+      </form>
+    </div>
+    </div>
+    <div id="message" class="hidden">
+        <h1>Your browser does not accept alerts</h1>
+        <p>Please enable alerts or change your browser settings to proceed.</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
